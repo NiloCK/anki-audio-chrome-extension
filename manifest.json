@@ -14,6 +14,17 @@
   "browser_action": {
     "default_title": "Play The Word!"
   },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://ankiweb.net/study/*",
+        "http://ankiweb.net/study/*"
+      ],
+      "js": [
+        "main.js"
+      ]
+    }
+  ],
   "web_accessible_resources": [
     "assets/*"
   ],
