@@ -3,18 +3,23 @@
 // found in the LICENSE file.
 
 
-chrome.runtime.onConnect.addListener(function () {
-  alert("onConnect has fired");
-})
 
 // Called when the user clicks on the browser action.
 chrome.browserAction.onClicked.addListener(function (tab) {
 
   // No tabs or host permissions needed!
   console.log('is this change hot-loaded?');
+
   chrome.tabs.executeScript({
-    code: 'document.body.style.backgroundColor="blue"'
-  });
-  let audio = new Audio(`.\\assets\\_Piano.mp3`);
-  audio.play();
+    code: `
+  word = document.getElementById("qa").innerText.trim().toLowerCase();
+  if (word) {
+    //alert(word);
+  }
+  new Audio(chrome.extension.getURL("assets/_Piano.mp3")).play();
+  `
+  }, (result) => {
+    // I do not know how results are passed here.
+  })
+
 });
