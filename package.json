@@ -1,0 +1,22 @@
+{
+  "name": "anki-audio-chrome-extension",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/chrome": "0.0.46"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/nilock/anki-audio-chrome-extension"
+  },
+  "keywords": [
+    "chrome-extension",
+    "anki"
+  ],
+  "author": "Colin Kennedy",
+  "license": "MIT"
+}

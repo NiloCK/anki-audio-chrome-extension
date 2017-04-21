@@ -1,0 +1,11 @@
+{
+    "typeAcquisition": {
+        "include": [
+            "chrome"
+        ]
+    },
+    "compileOnSave": true,
+    "exclude": [
+        "node_modules/"
+    ]
+}
