@@ -1,12 +1,14 @@
 {
-  "name": "Page Redder",
-  "description": "Make the current page red",
-  "version": "2.0",
+  "name": "Ankiweb Audio Shim",
+  "description": "Alters the AnkiWeb study page to play audio associated with each flashcard",
+  "version": "1.0",
   "permissions": [
     "activeTab"
   ],
   "background": {
-    "scripts": ["background.js"],
+    "scripts": [
+      "background.js"
+    ],
     "persistent": false
   },
   "browser_action": {
