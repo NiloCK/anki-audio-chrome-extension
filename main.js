@@ -3,7 +3,10 @@ var showAnswer = document.getElementById("ansbuta"); // the existing answer butt
 play.innerHTML = "Show Answer";
 play.classList.add("btn", "btn-lg", "btn-primary");
 play.onclick = function () {
-    var word = document.getElementById("qa").innerText.trim().toLowerCase();
+    var word = document.getElementById("qa").innerText;
+    word = word.trim();
+    word = word.toLowerCase();
+    word = word.replace(". ", "");
     new Audio(chrome.extension.getURL("assets/" + word + ".m4a")).play();
     showAnswer.click(); // pass the click forward to the existing btn
 };
